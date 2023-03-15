@@ -18,5 +18,5 @@ export type BookList = Book & {
 
 export type BookShelf = {
     userId: string;
-    bookList: BookList[];
+    bookList: Book[];
 }

@@ -36,12 +36,12 @@ const RegisterSchema = Yup.object().shape({
   confirmPassword: Yup.string()
     .oneOf([Yup.ref('password')], 'Password does not match')
     .required('Password confirmation is required'),
-  termsAndConditions: Yup.bool().oneOf(
-    [true], 'You need to accept the terms and conditions'),
+  // termsAndConditions: Yup.bool().oneOf(
+  //   [true], 'You need to accept the terms and conditions'),
 });
 
 export default function Register() {
-  const [passwordVisibility, setPasswordVisibility] = useState<boolean>(true);
+  const [passwordVisibility, setPasswordVisibility] = useState<boolean>(false);
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate()
   const registerHandler = (user: UserType) => {
