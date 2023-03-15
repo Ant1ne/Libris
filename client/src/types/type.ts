@@ -1,6 +1,3 @@
-export type User = {
-
-}
 
 export type Book = {
     title: string,
